@@ -3,7 +3,7 @@
     <vbm-slider />
     <vbm-advantages />
     <vbm-about-us />
-    <vbm-out-offer />
+    <vbm-offer />
     <vbm-features />
     <vbm-services />
     <vbm-team />

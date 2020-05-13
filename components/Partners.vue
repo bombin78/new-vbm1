@@ -28,3 +28,47 @@
     </div>
   </section>
 </template>
+
+<style lang="scss" scoped>
+@import '@/assets/scss/_variables.scss';
+
+.our_partners_area {
+    background: #f5f5f5;
+    .partners {
+        padding-top: 60px;
+        padding-bottom: 90px;
+        .item {
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .book_now_aera {
+        background: $bc;
+        padding: 50px 0;
+        .book_now {
+            .booking_text {
+                padding-top: 8px;
+                h4 {
+                    font: 700 18px $roboto;
+                    color: $h2;
+                }
+                p {
+                    font: 400 14px/26px $roboto;
+                    color: $p;
+                    padding-top: 5px;
+                }
+            }
+            .book_bottun {
+                a {
+                    width: 200px;
+                    background: #333333;
+                    border-radius: 10px;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+</style>
