@@ -1,9 +1,9 @@
 <template>
   <div>
-    <vbm-top-header-area />
-    <vbm-header-area />
+    <vbm-top-header />
+    <vbm-header />
     <nuxt />
-    <vbm-footer-area />
+    <vbm-footer />
   </div>
 </template>
 
@@ -13,10 +13,10 @@ import VbmHeader from '@/components/template/Header';
 import VbmFooter from '@/components/template/Footer';
 
 export default {
-  componenets: {
-    VbmTopHeaderArea,
-    VbmHeaderArea,
-    VbmFooterArea,
+  components: {
+    VbmTopHeader,
+    VbmHeader,
+    VbmFooter,
   }
 }
 </script>

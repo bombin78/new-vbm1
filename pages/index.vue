@@ -26,8 +26,8 @@ import VbmTeam from '@/components/Team';
 import VbmAchievments from '@/components/Achievments';
 import VbmTestimonial from '@/components/Testimonial';
 import VbmFeaturedWorks from '@/components/FeaturedWorks';
-import VbmVbmLatestBlog from '@/components/VbmLatestBlog';
-import VbmPartners from '@/components/VbmPartners';
+import VbmLatestBlog from '@/components/LatestBlog';
+import VbmPartners from '@/components/Partners';
 
 export default {
   components: {
