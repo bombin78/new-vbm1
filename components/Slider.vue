@@ -18,20 +18,20 @@
 <script>
 export default {
   mounted() {
-    // if( $('.slider_inner').length ){
-    //   $('.slider_inner').camera({
-    //     loader: true,
-    //     navigation: true,
-    //     autoPlay:false,
-    //     time: 4000,
-    //     playPause: false,
-    //     pagination: false,
-    //     thumbnails: false,
-    //     overlayer: true,
-    //     hover: false,
-    //     minHeight: '500px',
-    //   });
-    // }
+    if( $('.slider_inner').length ){
+      $('.slider_inner').camera({
+        loader: true,
+        navigation: true,
+        autoPlay:false,
+        time: 4000,
+        playPause: false,
+        pagination: false,
+        thumbnails: false,
+        overlayer: true,
+        hover: false,
+        minHeight: '500px',
+      });
+    }
   },
   data() {
     return {
@@ -57,7 +57,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="css">
 @import '@/plugins/camera-slider/camera.css';
 
 .slider_area {

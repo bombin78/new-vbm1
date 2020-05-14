@@ -32,6 +32,8 @@ module.exports = {
 
   plugins: [
     { src: '~/plugins/globals.js', mode: 'client'},
+    { src: '~/plugins/camera-slider/jquery.easing.1.3.js', mode: 'client'},
+    { src: '~/plugins/camera-slider/camera.min.js', mode: 'client'},
   ],
 
   buildModules: [
