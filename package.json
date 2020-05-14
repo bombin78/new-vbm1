@@ -1,5 +1,5 @@
 {
-  "name": "top-vbm1",
+  "name": "vbm1",
   "version": "1.0.0",
   "description": "new site of vbm company",
   "author": "Bombin Alexander",
@@ -12,13 +12,15 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
+    "bootstrap": "^3.3.7",
     "cross-env": "^5.2.0",
-    "element-ui": "^2.4.11",
     "express": "^4.16.4",
+    "jquery": "^1.12.0",
     "nuxt": "^2.0.0",
     "vue-yandex-maps": "^0.10.7"
   },
   "devDependencies": {
+    "css-loader": "^3.5.3",
     "node-sass": "^4.13.1",
     "nodemon": "^1.18.9",
     "sass-loader": "^8.0.2"

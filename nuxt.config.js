@@ -1,4 +1,6 @@
 
+const webpack = require('webpack');
+
 module.exports = {
   mode: 'universal',
 
@@ -11,36 +13,25 @@ module.exports = {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Oswald:300,400,700|Roboto:300,300i,400,400i,500,500i,700,700i'
+      },
     ]
   },
 
   loading: { color: '#fff' },
 
   css: [
-    'element-ui/lib/theme-chalk/index.css',
-    '~/plugins/vendors/bootstrap/css/bootstrap.min.css',
-    '~/plugins/vendors/animate/animate.css',
-    '~/plugins/vendors/font-awesome/css/font-awesome.min.css',
-    //'~/plugins/vendors/camera-slider/camera.css',
-    //'~/plugins/vendors/owl_carousel/owl.carousel.css',
+    'bootstrap/dist/css/bootstrap.css',
+    '@/plugins/animate/animate.css',
+    '@/plugins/font-awesome/css/font-awesome.min.css',
     '@/assets/scss/style.scss',
   ],
 
   plugins: [
-    { src: '~/plugins/js/jquery-1.12.0.min.js', mode: 'client'},
-    //{ src: '~/plugins/vendors/bootstrap/bootstrap.min.js', mode: 'client'},
-    //{ src: '~/plugins/vendors/animate/wow.min.js', mode: 'client'},
-    //{ src: '~/plugins/vendors/camera-slider/jquery.easing.1.3.js', mode: 'client'},
-    //{ src: '~/plugins/vendors/camera-slider/camera.min.js', mode: 'client'},
-    //{ src: '~/plugins/vendors/isotope/imagesloaded.pkgd.min.js', mode: 'client'},
-    //{ src: '~/plugins/vendors/isotope/isotope.pkgd.min.js', mode: 'client'},
-    //{ src: '~/plugins/vendors/Counter-Up/jquery.counterup.min.js', mode: 'client'},
-    //{ src: '~/plugins/vendors/Counter-Up/waypoints.min.js', mode: 'client'},
-    //{ src: '~/plugins/vendors/owl_carousel/owl.carousel.min.js', mode: 'client'},
-    //{ src: '~/plugins/vendors/stellar/jquery.stellar.js', mode: 'client'},
-    //{ src: '~/plugins/js/theme.js', mode: 'client'},
-    //'@/plugins/globals'
+    { src: '~/plugins/globals.js', mode: 'client'},
   ],
 
   buildModules: [
@@ -53,7 +44,13 @@ module.exports = {
   axios: {},
 
   build: {
-    transpile: [/^element-ui/],
+    plugins: [
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery',
+        'window.jQuery': 'jquery'
+      })
+    ],
     extend (config, ctx) {
     }
   }

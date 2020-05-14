@@ -65,6 +65,23 @@
   </nav>
 </template>
 
+<script>
+export default {
+  mounted() {
+    if ($('#main_navbar').length){
+         $('#main_navbar').affix({
+            offset: {
+                top: 10,
+                bottom: function () {
+                    return (this.bottom = $('.footer').outerHeight(true))
+                }
+            }
+        });
+    };
+  },
+}
+</script>
+
 <style lang="scss" scoped>
 @import '@/assets/scss/_variables.scss';
 
@@ -167,8 +184,7 @@
                             display: block;
                             a {
                                 line-height: normal;
-                                //font: 700 14px/normal $roboto;
-                                font: 700 14px/100px $roboto;
+                                font: 700 14 normal $roboto;
                                 padding: 12px 8px;
                                 display: block;
                             }
