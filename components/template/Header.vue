@@ -12,7 +12,7 @@
         </form>
       </div>
 
-      <div class="col-md-2 p0">
+      <div class="col-md-3 p0">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#min_navbar">
             <span class="sr-only">Toggle navigation</span>
@@ -20,44 +20,38 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt=""></a>
+          <a class="navbar-brand" href="index.html">ООО "ВИБРОБУРМАШ"</a>
         </div>
       </div>
 
-      <div class="col-md-10 p0">
+      <div class="col-md-9 p0">
         <div class="collapse navbar-collapse" id="min_navbar">
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown submenu">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Home</a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Главная</a>
+            </li>
+            <li class="dropdown submenu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">О компании</a>
+            </li>
+            <li class="dropdown submenu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Услуги</a>
               <ul class="dropdown-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index-2.html">Home 2</a></li>
+                <li><a href="blog.html">Изготовление новых машин МС-1Г.2</a></li>
+                <li><a href="blog-2.html">Изготовление навесного оборудования</a></li>
+                <li><a href="blog-2.html">Изготовление запасных частей</a></li>
+                <li><a href="blog-2.html">Ремонт ж.д.техники: МС, АВФ, АДМ, ж.д.кранов</a></li>
+                <li><a href="blog-2.html">Аренда ж.д.техники с экипажом и без него</a></li>
+                <li><a href="blog-2.html">Продажа б/у железнодорожной техники</a></li>
               </ul>
             </li>
             <li class="dropdown submenu">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us</a>
-              <ul class="dropdown-menu other_dropdwn">
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="about-2.html">About Us-2</a></li>
-              </ul>
-            </li>
-            <li class="dropdown submenu">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services</a>
-              <ul class="dropdown-menu other_dropdwn">
-                <li><a href="services.html">Services</a></li>
-                <li><a href="services-2.html">Services-2</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Gallery</a></li>
-            <li class="dropdown submenu">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog</a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Каталог</a>
               <ul class="dropdown-menu">
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="blog-2.html">Blog-2</a></li>
+                <li><a href="blog.html">Запчасти для ж.д. кранов</a></li>
+                <li><a href="blog-2.html">Запчасти для автомотрис</a></li>
               </ul>
             </li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="#" class="nav_searchFrom"><i class="fa fa-search"></i></a></li>
+            <li><a href="contact.html">Контакты</a></li>
           </ul>
         </div>
       </div>
@@ -71,7 +65,7 @@ export default {
     if ($('#main_navbar').length){
          $('#main_navbar').affix({
             offset: {
-                top: 10,
+                top: 50,
                 bottom: function () {
                     return (this.bottom = $('.footer').outerHeight(true))
                 }
@@ -130,7 +124,12 @@ export default {
     }
     .navbar-header {
         .navbar-brand {
-            padding-top: 39px;
+            //padding-top: 39px;
+            //start new
+            padding: 21px 15px;
+            height: 60px;
+            font-size: 22px;
+            //end new
             img {
                 max-width: 100%;
             }
@@ -140,7 +139,10 @@ export default {
         .navbar-nav.navbar-right {
             li {
                 a {
-                    font: 700 14px/100px $roboto;
+                    //font: 700 14px/100px $roboto;
+                    //start new
+                    font: 700 14px/60px $roboto;
+                    //start end
                     color: $h2;
                     text-transform: uppercase;
                     padding: 0 0 0 30px;
