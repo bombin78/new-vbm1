@@ -25,15 +25,18 @@ module.exports = {
 
   css: [
     'bootstrap/dist/css/bootstrap.css',
-    '@/plugins/animate/animate.css',
-    '@/plugins/font-awesome/css/font-awesome.min.css',
+    '@/static/animate/animate.css',
+    '@/static/font-awesome/css/font-awesome.min.css',
+    '@/plugins/gallery-master/css/blueimp-gallery.css',
+    '@/plugins/nivo-slider/nivo-slider.css',
+    '@/plugins/nivo-slider/themes/bar/bar.css',
     '@/assets/scss/style.scss',
   ],
 
   plugins: [
+    //{ src: '~/plugins/gallery-master/js/jquery.blueimp-gallery.min.js', mode: 'client'},
+    { src: '~/plugins/nivo-slider/jquery.nivo.slider.js', mode: 'client'},
     { src: '~/plugins/globals.js', mode: 'client'},
-    { src: '~/plugins/camera-slider/jquery.easing.1.3.js', mode: 'client'},
-    { src: '~/plugins/camera-slider/camera.min.js', mode: 'client'},
   ],
 
   buildModules: [
@@ -50,7 +53,8 @@ module.exports = {
       new webpack.ProvidePlugin({
         $: 'jquery',
         jQuery: 'jquery',
-        'window.jQuery': 'jquery'
+        'window.jQuery': 'jquery',
+        //'window.isotope': 'isotope',
       })
     ],
     extend (config, ctx) {
