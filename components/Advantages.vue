@@ -4,17 +4,17 @@
       <div class="row advantage_all">
         <div class="col-md-3 col-sm-6 builder">
           <i class="fa fa-home" aria-hidden="true"></i>
-          <h4>Professional Builde</h4>
+          <h4>Профессиональный подход</h4>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
         </div>
         <div class="col-md-3 col-sm-6 builder">
           <i class="fa fa-building" aria-hidden="true"></i>
-          <h4>We Deliver Quality</h4>
+          <h4>Обеспечиваем качество</h4>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
         </div>
         <div class="col-md-3 col-sm-6 builder">
           <i class="fa fa-clock-o" aria-hidden="true"></i>
-          <h4>Always On Time</h4>
+          <h4>Всегда вовремя</h4>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
         </div>
         <div class="col-md-3 col-sm-6 builder">
