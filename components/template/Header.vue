@@ -27,31 +27,28 @@
       <div class="col-md-9 p0">
         <div class="collapse navbar-collapse" id="min_navbar">
           <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown submenu">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Главная</a>
-            </li>
-            <li class="dropdown submenu">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">О компании</a>
-            </li>
-            <li class="dropdown submenu">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Услуги</a>
-              <ul class="dropdown-menu">
-                <li><a href="blog.html">Изготовление новых машин МС-1Г.2</a></li>
-                <li><a href="blog-2.html">Изготовление навесного оборудования</a></li>
-                <li><a href="blog-2.html">Изготовление запасных частей</a></li>
-                <li><a href="blog-2.html">Ремонт ж.д.техники: МС, АВФ, АДМ, ж.д.кранов</a></li>
-                <li><a href="blog-2.html">Аренда ж.д.техники с экипажом и без него</a></li>
-                <li><a href="blog-2.html">Продажа б/у железнодорожной техники</a></li>
+            <li
+              class="dropdown submenu"
+              v-for="item of list"
+              :key="item.id">
+
+              <nuxt-link
+                no-prefetch
+                active-class="_active"
+                class="dropdown-toggle"
+                data-toggle="dropdown"
+                :to="item.name">{{item.title}}
+              </nuxt-link>
+
+              <ul v-if="item.dropdownMenu.length > 0" class="dropdown-menu">
+                <li v-for="dropdownItem of item.dropdownMenu" :key="dropdownItem.id">
+                  <nuxt-link no-prefetch :to="dropdownItem.name">
+                    {{dropdownItem.title}}
+                  </nuxt-link>
+                </li>
               </ul>
+
             </li>
-            <li class="dropdown submenu">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Каталог</a>
-              <ul class="dropdown-menu">
-                <li><a href="blog.html">Запчасти для ж.д. кранов</a></li>
-                <li><a href="blog-2.html">Запчасти для автомотрис</a></li>
-              </ul>
-            </li>
-            <li><a href="contact.html">Контакты</a></li>
           </ul>
         </div>
       </div>
@@ -61,6 +58,91 @@
 
 <script>
 export default {
+  data() {
+    return {
+      list: [
+        {
+          id: 1,
+          title: 'Главная',
+          name: '/',
+          dropdownMenu: [],
+        },
+        {
+          id: 2,
+          title: 'О компании',
+          name: 'o-kompanii',
+          dropdownMenu: [],
+        },
+        {
+          id: 3,
+          title: 'Производство',
+          name: '',
+          dropdownMenu: [
+            {
+              id: 31,
+              title: 'Изготовление новых машин МС-1Г.2',
+              name: 'izgotovlenie-novykh-mashin-ms-1g2',
+            },
+            {
+              id: 32,
+              title: 'Изготовление навесного оборудования',
+              name: 'izgotovlenie-navesnogo-oborudovaniya',
+            },
+            {
+              id: 33,
+              title: 'Изготовление запасных частей',
+              name: 'izgotovlenie-zapasnykh-chastej',
+            },
+            {
+              id: 34,
+              title: 'Ремонт ж.д.техники: МС, АВФ, АДМ, ж.д.кранов',
+              name: 'remont-zdtekhniki',
+            },
+          ]
+        },
+        {
+          id: 4,
+          title: 'Аренда',
+          name: '',
+          dropdownMenu: [
+            {
+              id: 41,
+              title: 'Аренда ж.д.техники с экипажом и без него',
+              name: 'arenda-zdtekhniki',
+            },
+          ]
+        },
+        {
+          id: 5,
+          title: 'Каталог',
+          name: '',
+          dropdownMenu: [
+            {
+              id: 51,
+              title: 'Запчасти для ж.д. кранов',
+              name: '',
+            },
+            {
+              id: 52,
+              title: 'Запчасти для автомотрис',
+              name: '',
+            },
+            {
+              id: 53,
+              title: 'Железнодорожная техника б/у',
+              name: 'prodazha-zdtekhniki',
+            },
+          ],
+        },
+        {
+          id: 6,
+          title: 'Контакты',
+          name: 'kontakty',
+          dropdownMenu: [],
+        },
+      ],
+    };
+  },
   mounted() {
     if ($('#main_navbar').length){
          $('#main_navbar').affix({
