@@ -7,7 +7,7 @@
         <li><a href="#"><i class="fa fa-clock-o"></i>пн-пт: c 08:00 до 17:00</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <a href="#">Войти</a>
+        <nuxt-link to="/login">Войти</nuxt-link>
       </ul>
     </div>
   </section>
