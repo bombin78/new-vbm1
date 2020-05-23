@@ -1,12 +1,12 @@
 <template>
-    <section class="banner_area" data-stellar-background-ratio="0.5">
+    <div class="banner_area" data-stellar-background-ratio="0.5">
       <h2>About Us</h2>
       <vbm-breadcrumbs />
-    </section>
+    </div>
 </template>
 
 <script>
-import VbmBreadcrumbs from '@/components/Breadcrumbs';
+import VbmBreadcrumbs from '@/components/template/Breadcrumbs';
 
 export default {
   components: {

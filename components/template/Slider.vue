@@ -1,5 +1,5 @@
 <template>
-  <section class="theme-bar row m0">
+  <div class="theme-bar row m0">
 
     <div id="slider" class="nivo-slider">
         <img
@@ -25,7 +25,7 @@
       </div>
     </div>
 
-  </section>
+  </div>
 </template>
 
 <script>

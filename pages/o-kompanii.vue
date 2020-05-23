@@ -1,8 +1,6 @@
 <template>
   <main>
 
-    <vbm-banner />
-
     <section class="about_us_area row">
       <div class="container">
         <div class="tittle wow fadeInUp">
@@ -33,13 +31,11 @@
 </template>
 
 <script>
-import VbmBanner from '@/components/Banner';
 import VbmCallMin from '@/components/CallMin';
 import VbmFeaturedWorks from '@/components/FeaturedWorks';
 
 export default {
   components: {
-    VbmBanner,
     VbmCallMin,
     VbmFeaturedWorks,
   }

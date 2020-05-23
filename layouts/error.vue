@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import VbmBanner from '@/components/Banner';
+import VbmBanner from '@/components/template/Banner';
 
 export default {
   components: {

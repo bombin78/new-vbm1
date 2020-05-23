@@ -1,5 +1,5 @@
 <template>
-  <section class="top_header_area">
+  <div class="top_header_area">
     <div class="container">
       <ul class="nav navbar-nav top_nav">
         <li><a href="#"><i class="fa fa-phone"></i>+7 (920) 151-65-98</a></li>
@@ -10,7 +10,7 @@
         <nuxt-link to="/login">Войти</nuxt-link>
       </ul>
     </div>
-  </section>
+  </div>
 </template>
 
 <style lang="scss" scoped>

@@ -1,65 +1,92 @@
 <template>
-  <nav class="navbar navbar-default header_aera" id="main_navbar">
-    <div class="container">
+  <header class="header">
 
-      <div class="searchForm">
-        <form action="#" class="row m0">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="fa fa-search"></i></span>
-            <input type="search" name="search" class="form-control" placeholder="Type & Hit Enter">
-            <span class="input-group-addon form_hide"><i class="fa fa-times"></i></span>
+    <vbm-top-header />
+
+    <nav ref="menu" class="navbar navbar-default header_aera" id="main_navbar">
+      <div class="container">
+
+        <div class="searchForm">
+          <form action="#" class="row m0">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-search"></i></span>
+              <input type="search" name="search" class="form-control" placeholder="Type & Hit Enter">
+              <span class="input-group-addon form_hide"><i class="fa fa-times"></i></span>
+            </div>
+          </form>
+        </div>
+
+        <div class="col-md-3 p0">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#min_navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">ООО "ВИБРОБУРМАШ"</a>
           </div>
-        </form>
-      </div>
+        </div>
 
-      <div class="col-md-3 p0">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#min_navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.html">ООО "ВИБРОБУРМАШ"</a>
+        <div class="col-md-9 p0">
+          <div class="collapse navbar-collapse" id="min_navbar">
+            <ul class="nav navbar-nav navbar-right">
+              <li
+                class="dropdown submenu"
+                v-for="item of list"
+                :key="item.id">
+
+                <nuxt-link
+                  no-prefetch
+                  active-class="_active"
+                  class="dropdown-toggle"
+                  data-toggle="dropdown"
+                  @click.native="handler(item.id)"
+                  :to="item.name">{{item.title}}
+                </nuxt-link>
+
+                <ul v-if="item.dropdownMenu.length > 0" class="dropdown-menu">
+                  <li v-for="dropdownItem of item.dropdownMenu" :key="dropdownItem.id">
+                    <nuxt-link
+                      no-prefetch
+                      @click.native="handler(dropdownItem.id)"
+                      :to="dropdownItem.name">{{dropdownItem.title}}
+                    </nuxt-link>
+                  </li>
+                </ul>
+
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
+    </nav>
 
-      <div class="col-md-9 p0">
-        <div class="collapse navbar-collapse" id="min_navbar">
-          <ul class="nav navbar-nav navbar-right">
-            <li
-              class="dropdown submenu"
-              v-for="item of list"
-              :key="item.id">
+    <vbm-slider v-show="isShowBottomHeader" />
+    <vbm-banner v-show="!isShowBottomHeader"/>
 
-              <nuxt-link
-                no-prefetch
-                active-class="_active"
-                class="dropdown-toggle"
-                data-toggle="dropdown"
-                :to="item.name">{{item.title}}
-              </nuxt-link>
-
-              <ul v-if="item.dropdownMenu.length > 0" class="dropdown-menu">
-                <li v-for="dropdownItem of item.dropdownMenu" :key="dropdownItem.id">
-                  <nuxt-link no-prefetch :to="dropdownItem.name">
-                    {{dropdownItem.title}}
-                  </nuxt-link>
-                </li>
-              </ul>
-
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </nav>
+  </header>
 </template>
 
 <script>
+import VbmTopHeader from '@/components/template/TopHeader';
+import VbmSlider from '@/components/template/Slider';
+import VbmBanner from '@/components/template/Banner';
+
 export default {
+  components: {
+    VbmTopHeader,
+    VbmSlider,
+    VbmBanner,
+  },
+  methods: {
+    handler: function(id) {
+      this.isShowBottomHeader = (id === 1) ? true : false;
+    }
+  },
   data() {
     return {
+      isShowBottomHeader: false,
       list: [
         {
           id: 1,
