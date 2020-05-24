@@ -24,7 +24,12 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">ООО "ВИБРОБУРМАШ"</a>
+            <nuxt-link
+              no-prefetch
+              class="navbar-brand"
+              @click.native="setHeaderParams('/')"
+              :to="'/'">ООО "ВИБРОБУРМАШ"
+            </nuxt-link>
           </div>
         </div>
 
@@ -41,7 +46,7 @@
                   active-class="active"
                   class="dropdown-toggle"
                   data-toggle="dropdown"
-                  @click.native="setViewParams(item)"
+                  @click.native="setHeaderParams(item.name)"
                   :to="item.name">{{item.title}}
                 </nuxt-link>
 
@@ -49,7 +54,7 @@
                   <li v-for="dropdownItem of item.dropdownMenu" :key="dropdownItem.id">
                     <nuxt-link
                       no-prefetch
-                      @click.native="setViewParams(dropdownItem)"
+                      @click.native="setHeaderParams(dropdownItem.name)"
                       :to="dropdownItem.name">{{dropdownItem.title}}
                     </nuxt-link>
                   </li>
@@ -64,10 +69,10 @@
 
     <vbm-slider v-if="isShowBottomHeader"/>
     <vbm-banner
-    v-if="!isShowBottomHeader"
-    :title="title"
-    :list="breadcrumbList"
-    :setViewParams="setViewParams"/>
+      v-if="!isShowBottomHeader"
+      :title="title"
+      :list="breadcrumbList"
+      :setHeaderParams="setHeaderParams"/>
 
   </header>
 </template>
@@ -84,126 +89,39 @@ export default {
     VbmBanner,
   },
   methods: {
-    setViewParams: function(params) {
+    setHeaderParams: function(routeName) {
 
-      if(params.id === 1) {
-        this.isShowBottomHeader = true;
-        this.title = '';
-        this.breadcrumbList = [];
-      } else {
+      let rootItem = this.list.find(item => item.name === '/');
+
+      this.isShowBottomHeader = true;
+      this.title = rootItem.title;
+      this.breadcrumbList = [rootItem];
+
+      if(routeName !== '/' && routeName !== 'index') {
+
         this.isShowBottomHeader = false;
 
-        this.title = params.title;
-
-        this.breadcrumbList = [
-          {
-            id: 1,
-            title: 'Главная',
-            name: '/',
-          }
-        ];
-
         this.list.forEach(item => {
-          if(item.id === params.id) {
+
+          if(item.name === routeName) {
+
+            this.title = item.title;
             this.breadcrumbList.push(item);
           } else if (item.dropdownMenu.length > 0) {
+
             item.dropdownMenu.forEach(subItem => {
-              if(subItem.id === params.id) {
-                this.breadcrumbList.push(item, subItem);
+              if(subItem.name === routeName) {
+                this.title = subItem.title;
+                this.breadcrumbList.push(item,subItem);
               }
-            })
+            });
           }
         });
       }
     }
   },
-  data() {
-    return {
-      isShowBottomHeader: false,
-      title: '',
-      breadcrumbList: [],
-      list: [
-        {
-          id: 1,
-          title: 'Главная',
-          name: '/',
-          dropdownMenu: [],
-        },
-        {
-          id: 2,
-          title: 'О компании',
-          name: 'o-kompanii',
-          dropdownMenu: [],
-        },
-        {
-          id: 3,
-          title: 'Производство',
-          name: 'proizvodstvo',
-          dropdownMenu: [
-            {
-              id: 31,
-              title: 'Изготовление новых машин МС-1Г.2',
-              name: 'izgotovlenie-novykh-mashin-ms-1g2',
-            },
-            {
-              id: 32,
-              title: 'Изготовление навесного оборудования',
-              name: 'izgotovlenie-navesnogo-oborudovaniya',
-            },
-            {
-              id: 33,
-              title: 'Изготовление запасных частей',
-              name: 'izgotovlenie-zapasnykh-chastej',
-            },
-            {
-              id: 34,
-              title: 'Ремонт ж.д.техники: МС, АВФ, АДМ, ж.д.кранов',
-              name: 'remont-zdtekhniki',
-            },
-          ]
-        },
-        {
-          id: 4,
-          title: 'Аренда',
-          name: 'arenda',
-          dropdownMenu: [
-            {
-              id: 41,
-              title: 'Аренда ж.д.техники с экипажом и без него',
-              name: 'arenda-zdtekhniki',
-            },
-          ]
-        },
-        {
-          id: 5,
-          title: 'Каталог',
-          name: 'katalog',
-          dropdownMenu: [
-            {
-              id: 51,
-              title: 'Запчасти для ж.д. кранов',
-              name: '',
-            },
-            {
-              id: 52,
-              title: 'Запчасти для автомотрис',
-              name: '',
-            },
-            {
-              id: 53,
-              title: 'Железнодорожная техника б/у',
-              name: 'prodazha-zdtekhniki',
-            },
-          ],
-        },
-        {
-          id: 6,
-          title: 'Контакты',
-          name: 'kontakty',
-          dropdownMenu: [],
-        },
-      ],
-    };
+  created() {
+    this.setHeaderParams(this.$route.name);
   },
   mounted() {
     if ($('#main_navbar').length){
@@ -215,6 +133,94 @@ export default {
                 }
             }
         });
+    };
+  },
+  data() {
+    return {
+      isShowBottomHeader: false,
+      title: '',
+      breadcrumbList: [],
+      list: [
+          {
+            id: 1,
+            title: 'Главная',
+            name: '/',
+            dropdownMenu: [],
+          },
+          {
+            id: 2,
+            title: 'О компании',
+            name: 'o-kompanii',
+            dropdownMenu: [],
+          },
+          {
+            id: 3,
+            title: 'Производство',
+            name: 'proizvodstvo',
+            dropdownMenu: [
+              {
+                id: 31,
+                title: 'Изготовление новых машин МС-1Г.2',
+                name: 'izgotovlenie-novykh-mashin-ms-1g2',
+              },
+              {
+                id: 32,
+                title: 'Изготовление навесного оборудования',
+                name: 'izgotovlenie-navesnogo-oborudovaniya',
+              },
+              {
+                id: 33,
+                title: 'Изготовление запасных частей',
+                name: 'izgotovlenie-zapasnykh-chastej',
+              },
+              {
+                id: 34,
+                title: 'Ремонт ж.д.техники: МС, АВФ, АДМ, ж.д.кранов',
+                name: 'remont-zdtekhniki',
+              },
+            ]
+          },
+          {
+            id: 4,
+            title: 'Аренда',
+            name: 'arenda',
+            dropdownMenu: [
+              {
+                id: 41,
+                title: 'Аренда ж.д.техники с экипажом и без него',
+                name: 'arenda-zdtekhniki',
+              },
+            ]
+          },
+          {
+            id: 5,
+            title: 'Каталог',
+            name: 'katalog',
+            dropdownMenu: [
+              {
+                id: 51,
+                title: 'Запчасти для ж.д. кранов',
+                name: '',
+              },
+              {
+                id: 52,
+                title: 'Запчасти для автомотрис',
+                name: '',
+              },
+              {
+                id: 53,
+                title: 'Железнодорожная техника б/у',
+                name: 'prodazha-zdtekhniki',
+              },
+            ],
+          },
+          {
+            id: 6,
+            title: 'Контакты',
+            name: 'kontakty',
+            dropdownMenu: [],
+          },
+        ],
     };
   },
 }

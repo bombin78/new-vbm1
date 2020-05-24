@@ -3,7 +3,7 @@
     <li v-for="(item, index) of list" :key="item.id">
         <nuxt-link
           no-prefetch
-          @click.native="setViewParams(item)"
+          @click.native="setHeaderParams(item.name)"
           :active-class="(index === list.length - 1)? 'active': ''"
           :to="item.name">{{item.title}}
         </nuxt-link>
@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  props: ['list', 'setViewParams'],
+  props: ['list', 'setHeaderParams'],
 }
 </script>
 

@@ -1,7 +1,7 @@
 <template>
     <div class="banner_area" data-stellar-background-ratio="0.5">
       <h2>{{title}}</h2>
-      <vbm-breadcrumbs :list="list" :setViewParams="setViewParams"/>
+      <vbm-breadcrumbs :list="list" :setHeaderParams="setHeaderParams"/>
     </div>
 </template>
 
@@ -12,7 +12,7 @@ export default {
   components: {
     VbmBreadcrumbs,
   },
-  props: ['title', 'list', 'setViewParams'],
+  props: ['title', 'list', 'setHeaderParams'],
 }
 </script>
 
