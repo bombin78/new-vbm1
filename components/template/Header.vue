@@ -38,10 +38,10 @@
 
                 <nuxt-link
                   no-prefetch
-                  active-class="_active"
+                  active-class="active"
                   class="dropdown-toggle"
                   data-toggle="dropdown"
-                  @click.native="handler(item.id)"
+                  @click.native="setViewParams(item)"
                   :to="item.name">{{item.title}}
                 </nuxt-link>
 
@@ -49,7 +49,7 @@
                   <li v-for="dropdownItem of item.dropdownMenu" :key="dropdownItem.id">
                     <nuxt-link
                       no-prefetch
-                      @click.native="handler(dropdownItem.id)"
+                      @click.native="setViewParams(dropdownItem)"
                       :to="dropdownItem.name">{{dropdownItem.title}}
                     </nuxt-link>
                   </li>
@@ -62,8 +62,12 @@
       </div>
     </nav>
 
-    <vbm-slider v-show="isShowBottomHeader" />
-    <vbm-banner v-show="!isShowBottomHeader"/>
+    <vbm-slider v-if="isShowBottomHeader"/>
+    <vbm-banner
+    v-if="!isShowBottomHeader"
+    :title="title"
+    :list="breadcrumbList"
+    :setViewParams="setViewParams"/>
 
   </header>
 </template>
@@ -80,13 +84,44 @@ export default {
     VbmBanner,
   },
   methods: {
-    handler: function(id) {
-      this.isShowBottomHeader = (id === 1) ? true : false;
+    setViewParams: function(params) {
+
+      if(params.id === 1) {
+        this.isShowBottomHeader = true;
+        this.title = '';
+        this.breadcrumbList = [];
+      } else {
+        this.isShowBottomHeader = false;
+
+        this.title = params.title;
+
+        this.breadcrumbList = [
+          {
+            id: 1,
+            title: 'Главная',
+            name: '/',
+          }
+        ];
+
+        this.list.forEach(item => {
+          if(item.id === params.id) {
+            this.breadcrumbList.push(item);
+          } else if (item.dropdownMenu.length > 0) {
+            item.dropdownMenu.forEach(subItem => {
+              if(subItem.id === params.id) {
+                this.breadcrumbList.push(item, subItem);
+              }
+            })
+          }
+        });
+      }
     }
   },
   data() {
     return {
       isShowBottomHeader: false,
+      title: '',
+      breadcrumbList: [],
       list: [
         {
           id: 1,
@@ -103,7 +138,7 @@ export default {
         {
           id: 3,
           title: 'Производство',
-          name: '',
+          name: 'proizvodstvo',
           dropdownMenu: [
             {
               id: 31,
@@ -130,7 +165,7 @@ export default {
         {
           id: 4,
           title: 'Аренда',
-          name: '',
+          name: 'arenda',
           dropdownMenu: [
             {
               id: 41,
@@ -142,7 +177,7 @@ export default {
         {
           id: 5,
           title: 'Каталог',
-          name: '',
+          name: 'katalog',
           dropdownMenu: [
             {
               id: 51,

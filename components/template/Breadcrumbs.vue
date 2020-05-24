@@ -1,12 +1,20 @@
 <template>
   <ol class="breadcrumb">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="#" class="active">About Us</a></li>
+    <li v-for="(item, index) of list" :key="item.id">
+        <nuxt-link
+          no-prefetch
+          @click.native="setViewParams(item)"
+          :active-class="(index === list.length - 1)? 'active': ''"
+          :to="item.name">{{item.title}}
+        </nuxt-link>
+    </li>
   </ol>
 </template>
 
 <script>
-export default {}
+export default {
+  props: ['list', 'setViewParams'],
+}
 </script>
 
 <style lang="scss" scoped>
