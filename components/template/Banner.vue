@@ -1,5 +1,5 @@
 <template>
-    <div class="banner_area" data-stellar-background-ratio="0.5">
+    <div class="banner" data-stellar-background-ratio="0.5">
       <h2>{{title}}</h2>
       <vbm-breadcrumbs :list="list" :setHeaderParams="setHeaderParams"/>
     </div>
@@ -19,7 +19,7 @@ export default {
 <style lang="scss" scoped>
 @import '@/assets/scss/_variables.scss';
 
-.banner_area {
+.banner {
   background: url("/images/banner-bg.jpg") no-repeat fixed;
   background-position: center;
   text-align: center;

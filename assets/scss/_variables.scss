@@ -9,6 +9,9 @@ $bc: #f6b60b;
 $h2: #222222;
 $p: #555555;
 
+//$color1: #111f29;
+//$color2: #fff;
+
 // Mixins
 @mixin transition($property: all, $duration: 300ms, $animate: linear, $delay:0s){
     transition: $property $duration $animate $delay;
