@@ -3,9 +3,15 @@
   <div class="container">
     <div class="footer_row row">
       <div class="col-md-3 col-sm-6 footer_about">
-        <h2>ABOUT OUR COMPANY</h2>
-        <img src="images/footer-logo.png" alt="">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <h2>О нашей компании</h2>
+        <nuxt-link
+          no-prefetch
+          @click.native="setHeaderParams('/')"
+          :to="'/'">ООО "ВИБРОБУРМАШ"
+        </nuxt-link>
+        <p>
+          Разработка, изготовление и ремонт специальных машин на железнодорожном ходу и сменным навесным оборудованием к ним.
+        </p>
         <ul class="socail_icon">
           <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
           <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
@@ -14,14 +20,14 @@
         </ul>
       </div>
       <div class="col-md-3 col-sm-6 footer_about quick">
-        <h2>Quick links</h2>
+        <h2>Быстрые ссылки</h2>
         <ul class="quick_link">
-          <li><a href="#"><i class="fa fa-chevron-right"></i>Building Construction</a></li>
-          <li><a href="#"><i class="fa fa-chevron-right"></i>Home Renovation</a></li>
-          <li><a href="#"><i class="fa fa-chevron-right"></i>Hardwood Flooring</a></li>
-          <li><a href="#"><i class="fa fa-chevron-right"></i>Repairing Of Roof</a></li>
-          <li><a href="#"><i class="fa fa-chevron-right"></i>Commercial Construction</a></li>
-          <li><a href="#"><i class="fa fa-chevron-right"></i>Concreate Transport</a></li>
+          <li><a href="#"><i class="fa fa-chevron-right"></i>Ссылка 1</a></li>
+          <li><a href="#"><i class="fa fa-chevron-right"></i>Ссылка 2</a></li>
+          <li><a href="#"><i class="fa fa-chevron-right"></i>Ссылка 3</a></li>
+          <li><a href="#"><i class="fa fa-chevron-right"></i>Ссылка 4</a></li>
+          <li><a href="#"><i class="fa fa-chevron-right"></i>Ссылка 5</a></li>
+          <li><a href="#"><i class="fa fa-chevron-right"></i>Ссылка 6</a></li>
         </ul>
       </div>
       <div class="col-md-3 col-sm-6 footer_about">
@@ -30,13 +36,17 @@
         <a href="#" class="twitter">@colorlib: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</a>
       </div>
       <div class="col-md-3 col-sm-6 footer_about">
-        <h2>CONTACT US</h2>
+        <h2>Связаться с нами</h2>
         <address>
-          <p>Have questions, comments or just want to say hello:</p>
+          <p>Есть вопросы, комментарии или просто хотите поздороваться::</p>
           <ul class="my_address">
-            <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>info@thethemspro.com</a></li>
-            <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i>+880 123 456 789</a></li>
-            <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i><span>Sector # 10, Road # 05, Plot # 31, Uttara, Dhaka 1230 </span></a></li>
+            <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>info@vbm1.ru</a></li>
+            <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i>+7 (920) 151-65-98</a></li>
+            <li>
+                <a href="#"><i class="fa fa-map-marker" aria-hidden="true">
+                    </i><span>Тверская обл., г.Бологое, ул.Кирпичная, д.1А., офис.1 </span>
+                </a>
+            </li>
           </ul>
         </address>
       </div>

@@ -5,22 +5,22 @@
         <div class="col-md-3 col-sm-6 builder">
           <i class="fa fa-home" aria-hidden="true"></i>
           <h4>Профессиональный подход</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
+          <p>Какой-то текст для данного заголовка: 10 - 30 слов </p>
         </div>
         <div class="col-md-3 col-sm-6 builder">
           <i class="fa fa-building" aria-hidden="true"></i>
           <h4>Обеспечиваем качество</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
+          <p>Какой-то текст для данного заголовка: 10 - 30 слов</p>
         </div>
         <div class="col-md-3 col-sm-6 builder">
           <i class="fa fa-clock-o" aria-hidden="true"></i>
           <h4>Всегда вовремя</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
+          <p>Какой-то текст для данного заголовка: 10 - 30 слов </p>
         </div>
         <div class="col-md-3 col-sm-6 builder">
           <i class="fa fa-thumbs-up" aria-hidden="true"></i>
-          <h4>We Are Pasionate</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
+          <h4>Мы увлеченны своим делом</h4>
+          <p>Какой-то текст для данного заголовка: 10 - 30 слов </p>
         </div>
       </div>
     </div>
