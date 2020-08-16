@@ -3,16 +3,16 @@
     <div class="container">
       <div class="tittle wow fadeInUp">
         <h2>Наши преимущества</h2>
-        <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h4>
+        <h4>Небольшой вступительный текст о наших преимуществах</h4>
       </div>
       <div class="feature_row row">
         <div class="col-md-6 feature_img">
-          <img src="/images/feature-man.jpg" alt="">
+          <img src="/images/components/features/rzd-pm-1312.gif" alt="">
         </div>
         <div class="col-md-6 feature_content">
           <div class="subtittle">
             <h2>ПОЧЕМУ ВЫБИРАЮТ НАС</h2>
-            <h5>There are many variations of passages of Lorem Ipsum available.</h5>
+            <h5>Текст о том, почему выбирают ООО Вибробурмаш</h5>
           </div>
           <div class="media">
             <div class="media-left">
@@ -22,7 +22,7 @@
             </div>
             <div class="media-body">
               <a href="#">БОЛЕЕ 6 ЛЕТ ОПЫТА РАБОТЫ</a>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting indus-try. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+              <p>Небольшой текст про опыт работы</p>
             </div>
           </div>
           <div class="media">
@@ -33,7 +33,7 @@
             </div>
             <div class="media-body">
               <a href="#">КВАЛИФИЦИРОВАННЫЙ СПЕЦИАЛИСТЫ</a>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting indus-try. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+              <p>Небольшой текст про квалифицированных специалистов</p>
             </div>
           </div>
           <div class="media">
@@ -44,7 +44,7 @@
             </div>
             <div class="media-body">
               <a href="#">Лучшее обслуживание клиентов</a>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting indus-try. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+              <p>Небольшой текст про обслуживание клиентов</p>
             </div>
           </div>
         </div>
@@ -64,6 +64,7 @@
         .feature_img {
             padding-top: 10px;
             img {
+                margin-top: 40px;
                 max-width: 100%;
             }
         }
