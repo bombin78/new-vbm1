@@ -360,4 +360,35 @@
     }
   }
 }
+
+@media (max-width:991px){
+
+  .footer_about.quick{
+    padding-bottom: 70px !important;
+  }
+}
+
+@media (max-width:767px){
+
+  .footer_about.quick{
+    padding-bottom: 50px !important;
+  }
+  .footer_area .footer_row{
+    padding-bottom: 0;
+  }
+  .footer_area .footer_row .footer_about address .my_address li span{
+    padding-left: 0;
+  }
+}
+
+@media (max-width:360px){
+
+  .footer_area .copyright_area{
+    line-height: 26px;
+    padding: 10px 0;
+  }
+  .footer_area .footer_row .footer_about address .my_address li span {
+      padding-left: 30px;
+  }
+}
 </style>

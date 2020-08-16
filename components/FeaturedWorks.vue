@@ -1,64 +1,64 @@
 <template>
   <section class="featured_works row" data-stellar-background-ratio="0.3">
     <div class="tittle wow fadeInUp">
-      <h2>Our Featured Works</h2>
-      <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h4>
+      <h2>Мы предлагаем</h2>
+      <h4>Добавить небольшой текст (не более 10 слов) </h4>
     </div>
     <div class="featured_gallery">
       <div class="col-md-3 col-sm-4 col-xs-6 gallery_iner p0">
-        <img src="/images/gallery/gl-1.jpg" alt="">
+        <img src="/images/components/featured-works/ms1g2_1.jpg" alt="">
         <div class="gallery_hover">
-          <h4>Bolt Apartments</h4>
-          <a href="#">VIEW PROJECT</a>
+          <h4>Изготовление новых машин МС-1Г.2</h4>
+          <a href="#">Показать проект</a>
         </div>
       </div>
       <div class="col-md-3 col-sm-4 col-xs-6 gallery_iner p0">
-        <img src="/images/gallery/gl-2.jpg" alt="">
+        <img src="/images/components/featured-works/drilling-equipment.jpg" alt="">
         <div class="gallery_hover">
-          <h4>Bolt Apartments</h4>
-          <a href="#">VIEW PROJECT</a>
+          <h4>Изготовление навесного оборудования</h4>
+          <a href="#">Показать проект</a>
         </div>
       </div>
       <div class="col-md-3 col-sm-4 col-xs-6 gallery_iner p0">
-        <img src="/images/gallery/gl-3.jpg" alt="">
+        <img src="/images/components/featured-works/dVPoKx.jpg" alt="">
         <div class="gallery_hover">
-          <h4>Bolt Apartments</h4>
-          <a href="#">VIEW PROJECT</a>
+          <h4>Изготовление запасных частей</h4>
+          <a href="#">Показать проект</a>
         </div>
       </div>
       <div class="col-md-3 col-sm-4 col-xs-6 gallery_iner p0">
-        <img src="/images/gallery/gl-4.jpg" alt="">
+        <img src="/images/components/featured-works/kran_562.jpg" alt="">
         <div class="gallery_hover">
-          <h4>Bolt Apartments</h4>
-          <a href="#">VIEW PROJECT</a>
+          <h4>Ремонт ж.д.техники: МС, АВФ, АДМ, ж.д.кранов</h4>
+          <a href="#">Показать проект</a>
         </div>
       </div>
       <div class="col-md-3 col-sm-4 col-xs-6 gallery_iner p0">
-        <img src="/images/gallery/gl-5.jpg" alt="">
+        <img src="/images/components/featured-works/250761485.jpg" alt="">
         <div class="gallery_hover">
-          <h4>Bolt Apartments</h4>
-          <a href="#">VIEW PROJECT</a>
+          <h4>Аренда ж.д.техники с экипажом и без него</h4>
+          <a href="#">Показать проект</a>
         </div>
       </div>
       <div class="col-md-3 col-sm-4 col-xs-6 gallery_iner p0">
-        <img src="/images/gallery/gl-6.jpg" alt="">
+        <img src="/images/components/featured-works/f_5e7ba2653bc4c.jpg" alt="">
         <div class="gallery_hover">
-          <h4>Bolt Apartments</h4>
-          <a href="#">VIEW PROJECT</a>
+          <h4>Продажа запчастей для ж.д. кранов</h4>
+          <a href="#">Показать проект</a>
         </div>
       </div>
       <div class="col-md-3 col-sm-4 col-xs-6 gallery_iner p0">
-        <img src="/images/gallery/gl-7.jpg" alt="">
+        <img src="/images/components/featured-works/1100.jpg" alt="">
         <div class="gallery_hover">
-          <h4>Bolt Apartments</h4>
-          <a href="#">VIEW PROJECT</a>
+          <h4>Продажа запчастей для автомотрис</h4>
+          <a href="#">Показать проект</a>
         </div>
       </div>
       <div class="col-md-3 col-sm-4 col-xs-6 gallery_iner p0">
-        <img src="/images/gallery/gl-8.jpg" alt="">
+        <img src="/images/components/featured-works/mpt.JPG" alt="">
         <div class="gallery_hover">
-          <h4>Bolt Apartments</h4>
-          <a href="#">VIEW PROJECT</a>
+          <h4>Продажа ж.д. техники б/у</h4>
+          <a href="#">Показать проект</a>
         </div>
       </div>
     </div>
