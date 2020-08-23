@@ -8,6 +8,7 @@
 
         <nuxt-link
           no-prefetch
+          exact
           active-class="active"
           class="menu__link"
           data-toggle="dropdown"
@@ -46,6 +47,7 @@ export default {
 .menu {
 
   &__item {
+
     &:hover {
       @media (min-width: 768px) {
         .dropdown-menu {
@@ -66,10 +68,23 @@ export default {
     color: $h2;
     text-transform: uppercase;
     padding: 0 0 0 30px;
+  }
+}
 
-    &:focus,
-    &:hover {
+// Для переопределения стилей bootstrap
+.nav.navbar-nav {
+  .dropdown {
+    .menu__link {
+
+      &.active {
         color: $bc;
+        background-color: transparent;
+      }
+
+      &:focus,
+      &:hover {
+          color: $bc;
+      }
     }
   }
 }
