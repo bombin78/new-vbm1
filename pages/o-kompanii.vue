@@ -3,7 +3,7 @@
 
     <section class="row about">
       <div class="container">
-        <!-- <div class="tittle wow fadeInUp">
+        <!-- <div class="title wow fadeInUp">
           <h2>ABOUT US</h2>
           <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h4>
         </div> -->
@@ -14,7 +14,7 @@
           </div>
 
           <div class="col-md-7 col-sm-6 description">
-            <div class="subtittle description__title">
+            <div class="subtitle description__title">
               <h2>Кто мы</h2>
             </div>
             <p class="description__text">
@@ -35,7 +35,7 @@
 
           <div class="col-md-7 col-sm-6 description">
 
-            <div class="subtittle description__title">
+            <div class="subtitle description__title">
               <h2>Наши новые разработки:</h2>
             </div>
             <ul class="description__list">

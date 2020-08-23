@@ -1,7 +1,7 @@
 <template>
   <section class="what_we_area row">
     <div class="container">
-      <div class="tittle wow fadeInUp">
+      <div class="title wow fadeInUp">
         <h2>WHAT WE OFFER</h2>
         <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h4>
       </div>
@@ -46,7 +46,7 @@
 
 .what_we_area {
     background: #f8b81d;
-    .tittle {
+    .title {
         h2 {
             &:after {
                 background: #fff;

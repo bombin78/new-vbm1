@@ -1,7 +1,7 @@
 <template>
   <section class="our_feature_area">
     <div class="container">
-      <div class="tittle wow fadeInUp">
+      <div class="title wow fadeInUp">
         <h2>Наши преимущества</h2>
         <h4>Небольшой вступительный текст о наших преимуществах</h4>
       </div>
@@ -10,7 +10,7 @@
           <img src="/images/components/features/rzd-pm-1312.gif" alt="">
         </div>
         <div class="col-md-6 feature_content">
-          <div class="subtittle">
+          <div class="subtitle">
             <h2>ПОЧЕМУ ВЫБИРАЮТ НАС</h2>
             <h5>Текст о том, почему выбирают ООО Вибробурмаш</h5>
           </div>
@@ -69,7 +69,7 @@
             }
         }
         .feature_content {
-            .subtittle {
+            .subtitle {
                 padding-bottom: 40px;
             }
             .media {

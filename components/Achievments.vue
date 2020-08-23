@@ -1,7 +1,7 @@
 <template>
   <section class="our_achievments_area" data-stellar-background-ratio="0.3">
     <div class="container">
-      <div class="tittle wow fadeInUp">
+      <div class="title wow fadeInUp">
         <h2>Our Achievments</h2>
         <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h4>
       </div>
@@ -52,7 +52,7 @@
         display: block;
         z-index: -1;
     }
-    .tittle {
+    .title {
         h2 {
             color: #fff;
         }

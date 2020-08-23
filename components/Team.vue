@@ -1,7 +1,7 @@
 <template>
   <section class="our_team_area">
     <div class="container">
-      <div class="tittle wow fadeInUp">
+      <div class="title wow fadeInUp">
         <h2>Our Team</h2>
         <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h4>
       </div>

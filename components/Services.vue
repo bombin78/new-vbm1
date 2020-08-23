@@ -1,7 +1,7 @@
 <template>
   <section class="our_services_area">
     <div class="container">
-      <div class="tittle wow fadeInUp">
+      <div class="title wow fadeInUp">
         <h2>Our Services</h2>
         <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h4>
       </div>
@@ -21,7 +21,7 @@
           <div class="single_facilities col-xs-4 p0 painting photography adversting">
             <div class="single_facilities_inner">
               <img src="/images/gallery/sv-1.jpg" alt="">
-              <div class="gallery_hover">
+              <div class="gallery-hover">
                 <h4>Construction</h4>
                 <ul>
                   <li><a href="#"><i class="fa fa-link" aria-hidden="true"></i></a></li>
@@ -33,7 +33,7 @@
           <div class="single_facilities col-xs-4 p0 webdesign">
             <div class="single_facilities_inner">
               <img src="/images/gallery/sv-2.jpg" alt="">
-              <div class="gallery_hover">
+              <div class="gallery-hover">
                 <h4>Construction</h4>
                 <ul>
                   <li><a href="#"><i class="fa fa-link" aria-hidden="true"></i></a></li>
@@ -45,7 +45,7 @@
           <div class="single_facilities col-xs-4 painting p0 photography branding">
             <div class="single_facilities_inner">
               <img src="/images/gallery/sv-3.jpg" alt="">
-              <div class="gallery_hover">
+              <div class="gallery-hover">
                 <h4>Construction</h4>
                 <ul>
                   <li><a href="#"><i class="fa fa-link" aria-hidden="true"></i></a></li>
@@ -57,7 +57,7 @@
           <div class="single_facilities col-xs-4 p0 adversting webdesign adversting">
             <div class="single_facilities_inner">
               <img src="/images/gallery/sv-4.jpg" alt="">
-              <div class="gallery_hover">
+              <div class="gallery-hover">
                 <h4>Construction</h4>
                 <ul>
                   <li><a href="#"><i class="fa fa-link" aria-hidden="true"></i></a></li>
@@ -69,7 +69,7 @@
           <div class="single_facilities col-xs-4 p0 painting adversting branding">
             <div class="single_facilities_inner">
               <img src="/images/gallery/sv-5.jpg" alt="">
-              <div class="gallery_hover">
+              <div class="gallery-hover">
                 <h4>Construction</h4>
                 <ul>
                   <li><a href="#"><i class="fa fa-link" aria-hidden="true"></i></a></li>
@@ -81,7 +81,7 @@
           <div class="single_facilities col-xs-4 p0 webdesign photography magazine adversting">
             <div class="single_facilities_inner">
               <img src="/images/gallery/sv-6.jpg" alt="">
-              <div class="gallery_hover">
+              <div class="gallery-hover">
                 <h4>Construction</h4>
                 <ul>
                   <li><a href="#"><i class="fa fa-link" aria-hidden="true"></i></a></li>
@@ -102,7 +102,7 @@
 .our_services_area {
     background: #2e3841;
     padding-bottom: 100px;
-    .tittle {
+    .title {
         h2 {
             color: #fff;
         }
@@ -147,7 +147,7 @@
                     img {
                         max-width: 100%;
                     }
-                    .gallery_hover {
+                    .gallery-hover {
                         background-color: rgba(248, 184, 29, 0.851);
                         position: absolute;
                         top: 20px;
@@ -202,7 +202,7 @@
                     }
                     &:focus,
                     &:hover {
-                        .gallery_hover {
+                        .gallery-hover {
                             opacity: 1;
                             h4 {
                                 left: 0;
@@ -276,7 +276,7 @@
                     max-width: 100%;
                 }
                 .who_we_area {
-                    .subtittle {
+                    .subtitle {
                         padding-bottom: 30px;
                         h2 {
                             &:after {
@@ -302,5 +302,11 @@
 }
 .grid-sizer-2 {
     width: 41.66666667%;
+}
+
+@media (max-width:499px){
+  .our_services_area .portfolio_inner_area .portfolio_item .single_facilities .single_facilities_inner .gallery-hover{
+    display: none;
+  }
 }
 </style>
