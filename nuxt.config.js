@@ -24,19 +24,19 @@ module.exports = {
   loading: { color: '#fff' },
 
   css: [
-    'bootstrap/dist/css/bootstrap.css',
-    '@/static/animate/animate.css',
-    '@/static/font-awesome/css/font-awesome.min.css',
-    '@/plugins/gallery-master/css/blueimp-gallery.css',
-    '@/plugins/nivo-slider/nivo-slider.css',
-    '@/plugins/nivo-slider/themes/bar/bar.css',
-    '@/assets/scss/style.scss',
+    // 'bootstrap/dist/css/bootstrap.css',
+    // '@/static/animate/animate.css',
+    // '@/static/font-awesome/css/font-awesome.min.css',
+    // '@/plugins/gallery-master/css/blueimp-gallery.css',
+    // '@/plugins/nivo-slider/nivo-slider.css',
+    // '@/plugins/nivo-slider/themes/bar/bar.css',
+    // '@/assets/scss/style.scss',
   ],
 
   plugins: [
     //{ src: '~/plugins/gallery-master/js/jquery.blueimp-gallery.min.js', mode: 'client'},
-    { src: '~/plugins/nivo-slider/jquery.nivo.slider.js', mode: 'client'},
-    { src: '~/plugins/globals.js', mode: 'client'},
+    // { src: '~/plugins/nivo-slider/jquery.nivo.slider.js', mode: 'client'},
+    // { src: '~/plugins/globals.js', mode: 'client'},
   ],
 
   buildModules: [
@@ -49,14 +49,7 @@ module.exports = {
   axios: {},
 
   build: {
-    plugins: [
-      new webpack.ProvidePlugin({
-        $: 'jquery',
-        jQuery: 'jquery',
-        'window.jQuery': 'jquery',
-        //'window.isotope': 'isotope',
-      })
-    ],
+    plugins: [],
     extend (config, ctx) {
     }
   }
