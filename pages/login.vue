@@ -27,7 +27,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-form {
-    width: 600px;
-}
+// form {
+//     width: 600px;
+// }
 </style>

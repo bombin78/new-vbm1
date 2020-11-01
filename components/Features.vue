@@ -54,58 +54,58 @@
 </template>
 
 <style lang="scss" scoped>
-@import '@/assets/scss/_variables.scss';
-
-.our_feature_area {
-    padding-bottom: 90px;
-    background: #fefefe;
-    .feature_row {
-        padding-top: 70px;
-        .feature_img {
-            padding-top: 10px;
-            img {
-                margin-top: 40px;
-                max-width: 100%;
-            }
-        }
-        .feature_content {
-            .subtitle {
-                padding-bottom: 40px;
-            }
-            .media {
-                padding-bottom: 15px;
-                .media-left {
-                    padding-right: 30px;
-                    a {
-                        i {
-                            font-size: 24px;
-                            color: $bc;
-                            line-height: 50px;
-                            width: 60px;
-                            text-align: center;
-                            background: #333333;
-                            border: 5px solid $bc;
-                        }
-                    }
-                }
-                .media-body {
-                    a {
-                        font: 700 18px $roboto;
-                        color: $h2;
-                        text-transform: uppercase;
-                        &:focus,
-                        &:hover {
-                            color: $bc;
-                        }
-                    }
-                    p {
-                        font: 400 14px/26px $roboto;
-                        color: $p;
-                        padding-top: 20px;
-                    }
-                }
-            }
-        }
-    }
-}
+// @import '@/assets/scss/_variables.scss';
+//
+// .our_feature_area {
+//     padding-bottom: 90px;
+//     background: #fefefe;
+//     .feature_row {
+//         padding-top: 70px;
+//         .feature_img {
+//             padding-top: 10px;
+//             img {
+//                 margin-top: 40px;
+//                 max-width: 100%;
+//             }
+//         }
+//         .feature_content {
+//             .subtitle {
+//                 padding-bottom: 40px;
+//             }
+//             .media {
+//                 padding-bottom: 15px;
+//                 .media-left {
+//                     padding-right: 30px;
+//                     a {
+//                         i {
+//                             font-size: 24px;
+//                             color: $bc;
+//                             line-height: 50px;
+//                             width: 60px;
+//                             text-align: center;
+//                             background: #333333;
+//                             border: 5px solid $bc;
+//                         }
+//                     }
+//                 }
+//                 .media-body {
+//                     a {
+//                         font: 700 18px $roboto;
+//                         color: $h2;
+//                         text-transform: uppercase;
+//                         &:focus,
+//                         &:hover {
+//                             color: $bc;
+//                         }
+//                     }
+//                     p {
+//                         font: 400 14px/26px $roboto;
+//                         color: $p;
+//                         padding-top: 20px;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
 </style>

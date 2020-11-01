@@ -97,65 +97,65 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/scss/_variables.scss';
-
-.about {
-
-  background: #fefefe;
-
-  &__row {
-
-    padding-bottom: 70px;
-    &:nth-of-type(1) {
-      padding-top: 70px;
-    }
-  }
-}
-
-.description {
-
-  &__text {
-    font: 400 14px/26px $roboto;
-    color: $p;
-    margin-bottom: 0;
-    padding-top: 28px;
-    //padding-bottom: 54px;
-
-    &:nth-last-of-type(1) {
-      padding-bottom: 54px;
-    }
-  }
-
-  &__list {
-    padding-left: 15px;
-  }
-
-  &__item {
-    padding-top: 12px;
-    font: 400 14px/24px $roboto;
-    color: $p;
-  }
-}
-
-.about-client {
-  padding-top: 7px;
-  img {
-    max-width: 100%;
-  }
-}
-
-.button_all {
-  width: 210px;
-}
-
-@media (max-width:767px){
-
-  .about .about__row .about-client {
-    padding-top: 40px;
-  }
-  .about-client.about-pages-client{
-      padding-top: 0 !important;
-      padding-bottom: 30px;
-  }
-}
+// @import '@/assets/scss/_variables.scss';
+//
+// .about {
+//
+//   background: #fefefe;
+//
+//   &__row {
+//
+//     padding-bottom: 70px;
+//     &:nth-of-type(1) {
+//       padding-top: 70px;
+//     }
+//   }
+// }
+//
+// .description {
+//
+//   &__text {
+//     font: 400 14px/26px $roboto;
+//     color: $p;
+//     margin-bottom: 0;
+//     padding-top: 28px;
+//     //padding-bottom: 54px;
+//
+//     &:nth-last-of-type(1) {
+//       padding-bottom: 54px;
+//     }
+//   }
+//
+//   &__list {
+//     padding-left: 15px;
+//   }
+//
+//   &__item {
+//     padding-top: 12px;
+//     font: 400 14px/24px $roboto;
+//     color: $p;
+//   }
+// }
+//
+// .about-client {
+//   padding-top: 7px;
+//   img {
+//     max-width: 100%;
+//   }
+// }
+//
+// .button_all {
+//   width: 210px;
+// }
+//
+// @media (max-width:767px){
+//
+//   .about .about__row .about-client {
+//     padding-top: 40px;
+//   }
+//   .about-client.about-pages-client{
+//       padding-top: 0 !important;
+//       padding-bottom: 30px;
+//   }
+// }
 </style>

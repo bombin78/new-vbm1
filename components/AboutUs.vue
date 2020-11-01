@@ -27,40 +27,40 @@
 </template>
 
 <style lang="scss" scoped>
-@import '@/assets/scss/_variables.scss';
-
-.about{
-
-  background: #fefefe;
-
-  &__row {
-
-    padding-top: 70px;
-    padding-bottom: 70px;
-  }
-}
-
-.description {
-
-  &__text {
-    font: 400 14px/26px $roboto;
-    color: $p;
-    padding-top: 28px;
-    padding-bottom: 54px;
-  }
-}
-
-.about-client {
-    padding-top: 7px;
-    img {
-        max-width: 100%;
-    }
-}
-
-@media (max-width:767px){
-
-  .about .about__row .about-client {
-    padding-top: 40px;
-  }
-}
+// @import '@/assets/scss/_variables.scss';
+//
+// .about{
+//
+//   background: #fefefe;
+//
+//   &__row {
+//
+//     padding-top: 70px;
+//     padding-bottom: 70px;
+//   }
+// }
+//
+// .description {
+//
+//   &__text {
+//     font: 400 14px/26px $roboto;
+//     color: $p;
+//     padding-top: 28px;
+//     padding-bottom: 54px;
+//   }
+// }
+//
+// .about-client {
+//     padding-top: 7px;
+//     img {
+//         max-width: 100%;
+//     }
+// }
+//
+// @media (max-width:767px){
+//
+//   .about .about__row .about-client {
+//     padding-top: 40px;
+//   }
+// }
 </style>

@@ -29,46 +29,46 @@
 </template>
 
 <style lang="scss" scoped>
-@import '@/assets/scss/_variables.scss';
-
-.top-header {
-  background: #111f29;
-}
-
-.login {
-  padding: 0 15px 0 30px;
-  color: #fff;
-
-  line-height: 50px;
-}
-
-.top-nav {
-
-  &__item {
-    &:first-child {
-      .top-nav__link {
-        padding: 0;
-      }
-    }
-  }
-
-  &__link {
-
-    font: 400 14px/50px $roboto;
-    color: #fff;
-    padding: 0 0 0 30px;
-
-    &:focus,
-    &:hover {
-      background-color: transparent;
-      color: $bc;
-    }
-  }
-
-  &__icon {
-    color: $bc;
-    font-size: 18px;
-    padding-right: 10px;
-  }
-}
+// @import '@/assets/scss/_variables.scss';
+//
+// .top-header {
+//   background: #111f29;
+// }
+//
+// .login {
+//   padding: 0 15px 0 30px;
+//   color: #fff;
+//
+//   line-height: 50px;
+// }
+//
+// .top-nav {
+//
+//   &__item {
+//     &:first-child {
+//       .top-nav__link {
+//         padding: 0;
+//       }
+//     }
+//   }
+//
+//   &__link {
+//
+//     font: 400 14px/50px $roboto;
+//     color: #fff;
+//     padding: 0 0 0 30px;
+//
+//     &:focus,
+//     &:hover {
+//       background-color: transparent;
+//       color: $bc;
+//     }
+//   }
+//
+//   &__icon {
+//     color: $bc;
+//     font-size: 18px;
+//     padding-right: 10px;
+//   }
+// }
 </style>

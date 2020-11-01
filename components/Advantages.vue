@@ -28,31 +28,31 @@
 </template>
 
 <style lang="scss" scoped>
-@import '@/assets/scss/_variables.scss';
-
-.advantages {
-    background: #f5f5f5;
-    padding-top: 80px;
-    padding-bottom: 50px;
-    .advantage_all {
-        .builder {
-            text-align: center;
-            padding-bottom: 25px;
-            i {
-                font-size: 48px;
-                color: $bc;
-                padding-bottom: 35px;
-            }
-            h4 {
-                font: 700 18px $roboto;
-                color: $h2;
-                padding-bottom: 20px;
-            }
-            p {
-                font: 400 14px/26px $roboto;
-                color: $p;
-            }
-        }
-    }
-}
+// @import '@/assets/scss/_variables.scss';
+//
+// .advantages {
+//     background: #f5f5f5;
+//     padding-top: 80px;
+//     padding-bottom: 50px;
+//     .advantage_all {
+//         .builder {
+//             text-align: center;
+//             padding-bottom: 25px;
+//             i {
+//                 font-size: 48px;
+//                 color: $bc;
+//                 padding-bottom: 35px;
+//             }
+//             h4 {
+//                 font: 700 18px $roboto;
+//                 color: $h2;
+//                 padding-bottom: 20px;
+//             }
+//             p {
+//                 font: 400 14px/26px $roboto;
+//                 color: $p;
+//             }
+//         }
+//     }
+// }
 </style>

@@ -102,83 +102,83 @@
 </template>
 
 <style lang="scss" scoped>
-@import '@/assets/scss/_variables.scss';
-
-.testimonial_area {
-    padding-bottom: 90px;
-    background: #fefefe;
-    .testimonial_carosel {
-        padding-top: 60px;
-        .item {
-            .media {
-                max-width: 260px;
-                margin: 0 auto;
-                padding-bottom: 35px;
-                .media-left {
-                    padding-right: 30px;
-                    a {
-                        img {
-                            width: auto;
-                        }
-                    }
-                }
-                .media-body {
-                    padding-top: 40px;
-                    h4 {
-                        font: 700 14px $roboto;
-                        text-transform: uppercase;
-                        color: $h2;
-                    }
-                    h6 {
-                        font: 400 italic 14px $roboto;
-                        color: $p;
-                        padding-top: 5px;
-                    }
-                }
-            }
-            p {
-                font: 400 italic 14px/26px $roboto;
-                color: $bc;
-                max-width: 945px;
-                margin: 0 auto;
-                text-align: center;
-                padding-bottom: 50px;
-                i {
-                    color: $p;
-                    font-size: 18px;
-                    display: block;
-
-                }
-                .fa-quote-left {
-                    text-align: right;
-                    padding-top: 5px;
-                }
-                .fa-quote-right {
-                    text-align: left;
-                    padding-bottom: 5px;
-                }
-            }
-        }
-        .owl-controls {
-            text-align: center;
-            .owl-dots {
-                .owl-dot {
-                    height: 10px;
-                    width: 10px;
-                    border: 2px solid $p;
-                    margin-left: 15px;
-                    display: inline-block;
-                    @include transition;
-                    border-radius: 50%;
-                    &.active,
-                    &:focus,
-                    &:hover {
-                        background: $bc;
-                        border: 2px solid $bc;
-                    }
-                }
-            }
-        }
-    }
-}
+// @import '@/assets/scss/_variables.scss';
+//
+// .testimonial_area {
+//     padding-bottom: 90px;
+//     background: #fefefe;
+//     .testimonial_carosel {
+//         padding-top: 60px;
+//         .item {
+//             .media {
+//                 max-width: 260px;
+//                 margin: 0 auto;
+//                 padding-bottom: 35px;
+//                 .media-left {
+//                     padding-right: 30px;
+//                     a {
+//                         img {
+//                             width: auto;
+//                         }
+//                     }
+//                 }
+//                 .media-body {
+//                     padding-top: 40px;
+//                     h4 {
+//                         font: 700 14px $roboto;
+//                         text-transform: uppercase;
+//                         color: $h2;
+//                     }
+//                     h6 {
+//                         font: 400 italic 14px $roboto;
+//                         color: $p;
+//                         padding-top: 5px;
+//                     }
+//                 }
+//             }
+//             p {
+//                 font: 400 italic 14px/26px $roboto;
+//                 color: $bc;
+//                 max-width: 945px;
+//                 margin: 0 auto;
+//                 text-align: center;
+//                 padding-bottom: 50px;
+//                 i {
+//                     color: $p;
+//                     font-size: 18px;
+//                     display: block;
+//
+//                 }
+//                 .fa-quote-left {
+//                     text-align: right;
+//                     padding-top: 5px;
+//                 }
+//                 .fa-quote-right {
+//                     text-align: left;
+//                     padding-bottom: 5px;
+//                 }
+//             }
+//         }
+//         .owl-controls {
+//             text-align: center;
+//             .owl-dots {
+//                 .owl-dot {
+//                     height: 10px;
+//                     width: 10px;
+//                     border: 2px solid $p;
+//                     margin-left: 15px;
+//                     display: inline-block;
+//                     @include transition;
+//                     border-radius: 50%;
+//                     &.active,
+//                     &:focus,
+//                     &:hover {
+//                         background: $bc;
+//                         border: 2px solid $bc;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
 </style>

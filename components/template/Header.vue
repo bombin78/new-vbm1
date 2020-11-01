@@ -196,40 +196,40 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/scss/_variables.scss';
-
-.header-area {
-
-  background: #fff;
-  border-radius: 0;
-  border: 0;
-  margin: 0;
-  width: 100%;
-  z-index: 9999;
-  top: 0;
-  box-shadow: 0 0 20px 0 rgba(21,47,95,0.2);
-
-  .show {
-      height: 80px;
-      border-bottom: 1px solid transparent;
-  }
-}
-
-.navbar-brand {
-  margin-right: -25px;
-  padding: 21px 15px;
-  height: 60px;
-  font-size: 22px;
-}
-
-.navbar-default .navbar-nav > .open > a,
-.navbar-default .navbar-nav > .open > a:focus,
-.navbar-default .navbar-nav > .open > a:hover {
-    background-color: transparent;
-}
-
-.affix + .theme-bar,
-.affix + .banner {
-  margin-top: 65px;
-}
+// @import '@/assets/scss/_variables.scss';
+//
+// .header-area {
+//
+//   background: #fff;
+//   border-radius: 0;
+//   border: 0;
+//   margin: 0;
+//   width: 100%;
+//   z-index: 9999;
+//   top: 0;
+//   box-shadow: 0 0 20px 0 rgba(21,47,95,0.2);
+//
+//   .show {
+//       height: 80px;
+//       border-bottom: 1px solid transparent;
+//   }
+// }
+//
+// .navbar-brand {
+//   margin-right: -25px;
+//   padding: 21px 15px;
+//   height: 60px;
+//   font-size: 22px;
+// }
+//
+// .navbar-default .navbar-nav > .open > a,
+// .navbar-default .navbar-nav > .open > a:focus,
+// .navbar-default .navbar-nav > .open > a:hover {
+//     background-color: transparent;
+// }
+//
+// .affix + .theme-bar,
+// .affix + .banner {
+//   margin-top: 65px;
+// }
 </style>
